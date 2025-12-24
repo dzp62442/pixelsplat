@@ -18,7 +18,6 @@
         "**/lightning_logs": true,
         "**/dataset_cache": true,
         "**/.ruff_cache": true,
-        "**/datasets": true,
     },
     "[python]": {
         "editor.defaultFormatter": "ms-python.black-formatter"
