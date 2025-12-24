@@ -1,3 +1,17 @@
+在 OmniScene 数据集上与 SVF-GS 进行对比
+
+### 训练
+```bash
+python3 -m src.main +experiment=omniscene_112x200
+```
+
+### 测试
+```bash
+python3 -m src.main +experiment=omniscene_112x200 mode=test checkpointing.load=checkpoints/omniscene.ckpt
+```
+
+---
+
 # pixelSplat
 
 This is the code for **pixelSplat: 3D Gaussian Splats from Image Pairs for Scalable Generalizable 3D Reconstruction** by David Charatan, Sizhe Lester Li, Andrea Tagliasacchi, and Vincent Sitzmann.
