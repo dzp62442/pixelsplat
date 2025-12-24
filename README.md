@@ -12,7 +12,7 @@ This version of the codebase has been updated slightly to reflect the CVPR camer
 
 * The models have all been retrained with small bug fixes and a slight architectural improvement (per-image self-attention + convolution has been replaced with only per-image self-attention in the epipolar transformer). This has improved the results slightly across the board:
 
-| Run Name      | PSNR  | SSIM  | LPIPS |
+| Run Name      |  PSNR |  SSIM | LPIPS |
 | :------------ | ----: | ----: | ----: |
 | `re10k` (old) | 25.89 | 0.858 | 0.142 |
 | `re10k` (new) | 26.09 | 0.863 | 0.136 |
@@ -27,10 +27,10 @@ This version of the codebase has been updated slightly to reflect the CVPR camer
 To get started, create a virtual environment using Python 3.10+:
 
 ```bash
-python3.10 -m venv venv
-source venv/bin/activate
-# Install these first! Also, make sure you have python3.11-dev installed if using Ubuntu.
-pip install wheel torch torchvision torchaudio
+# 使用 CUDA 11.8 进行复现
+conda create -n pixelsplat python=3.10
+conda activate pixelsplat
+pip install numpy==1.26.3 torch==2.1.2 torchvision==0.16.2 torchaudio==2.1.2 --index-url https://download.pytorch.org/whl/cu118
 pip install -r requirements.txt
 ```
 
